@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-auth.js"></script>
+
+
+	<title>NJM</title>
+
+	<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet"> -->
+	<link href="assets/css/stylesV41.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="navcontainer">
+			<div class="njmlogo">
+				<img id="logo" src="assets/Images/NJM Logo.png " width="196" height="30">
+				<img id="homeButton" src="assets/Images/home-button.svg " width="40" height="40">
+			</div>
+
+			<nav>
+				<div class="menumask"></div>
+				<div id="menuToggle">
+
+					<input id="checkbox" type="checkbox">
+
+					<span></span>
+					<span></span>
+					<span></span>
+
+					<ul id="menu">
+						<div id="menuinner">
+							<b>
+								<li>Jongens</li>
+							</b>
+							<div class="Jongens">
+								<a>
+									<li href="#Jongens" data-target="Junioren"> <img src="assets/Images/Junioren_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Junioren" align="middle">
+										<fu data-target="Junioren"> Junioren</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Jongens" data-target="Kadetten"> <img src="assets/Images/Kadetten_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Kadetten" align="middle">
+										<fu data-target="Kadetten"> Kadetten</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Jongens" data-target="Pupillen"> <img src="assets/Images/Pupillen_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Pupillen" align="middle">
+										<fu data-target="Pupillen"> Pupillen</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Jongens" data-target="Welpen"> <img src="assets/Images/Welpen_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Welpen" align="middle">
+										<fu data-target="Welpen"> Welpen</fu>
+									</li>
+								</a>
+							</div>
+
+							<b>
+								<li>Meisjes</li>
+							</b>
+							<div class="Meisjes">
+								<a>
+									<li href="#Meisjes" data-target="Junioren"> <img src="assets/Images/Junioren_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Junioren" align="middle">
+										<fu data-target="Junioren"> Junioren</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Meisjes" data-target="Kadetten"> <img src="assets/Images/Kadetten_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Kadetten" align="middle">
+										<fu data-target="Kadetten"> Kadetten</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Meisjes" data-target="Pupillen"> <img src="assets/Images/Pupillen_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Pupillen" align="middle">
+										<fu data-target="Pupillen"> Pupillen</fu>
+									</li>
+								</a>
+								<a>
+									<li href="#Meisjes" data-target="Welpen"> <img src="assets/Images/Welpen_Menu_Logo.png" style="width:48px;height:39px;"
+										 data-target="Welpen" align="middle">
+										<fu data-target="Welpen"> Welpen</fu>
+									</li>
+								</a>
+							</div>
+							<div class="Authentication">
+								<a>
+									<li href="#login" data-target="login">Inloggen</li>
+
+								</a>
+							</div>
+							<div class="Invoer">
+								<a>
+
+									<li href="#backend" data-target="backend">Invoer</li>
+								</a>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="main-content">
+
+		<div class="home-product page">
+			<!-- Services Section -->
+			<div id="services" class="text-center">
+				<div class="home-menu-container">
+					<div class="col-md-8 col-md-offset-2 section-title">
+						<h2>Welkom bij NJMLive</h2>
+						<p>Check hier alle groepen en standen live!</p>
+					</div>
+				</div>
+			</div>
+			<!-- About Section -->
+			<div id="about">
+				<div class="home-menu-container">
+					<div class="about-text">
+						<h2>Plattegrond</h2>
+						<p>Nummers verwijzen naar groepsnummer</p>
+						<p><b style="color: #ce2323;">Rood</b> is Meisjes & <b style="color: #002c69;">Blauw</b> is Jongens</p>
+
+
+
+						<table>
+							<tr>
+								<td>
+									BreedteSporthal
+								</td>
+								<td>Topsporthal</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="assets/Images/BREEDTESPORTHAL.png" width="100%">
+								</td>
+								<td> <img src="assets/Images/TOPSPORTHAL.png" width="100%">
+								</td>
+							</tr>
+						</table>
+
+
+
+					</div>
+
+
+
+				</div>
+			</div>
+
+			<!-- Team Section -->
+			<div id="team" class="text-center">
+				<div class="home-menu-container">
+					<div class="about-text">
+						<h2>Nog vragen?</h2>
+						<p>Vraag het aan een van onze vrijwilligers, herkenbaar aan de fel gele shirts. Ze helpen je graag!</p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="single-product page">
+			<div class="preview-large" id="tables">
+
+			</div>
+		</div>
+
+		<div class="sign-product page">
+			<p>Alleen voor baan commissarissen</p>
+
+			<label for="fname">E-mail</label>
+			<input type="text" id="UserName" name="firstname" placeholder="E-mail..">
+			<br>
+			<label for="lname">Password</label>
+			<input type="password" id="PassWord" name="lastname" placeholder="Wachtwoord..">
+
+			<br>
+			<button type="button" class="LoginButton">Login</button>
+			<button type="button" class="LogOut">Uitloggen</button>
+
+		</div>
+
+		<div class="backend-product page">
+
+			<button class="NieuwePoule">Creëer Poule</button>
+			<button class="NieuweSpeler">Creëer Speler</button>
+			<button class="WijzigSpeler">Wijzig Speler</button>
+
+			<div class="WijzigPlayer">
+				<h2>Wijzig Speler</h2>
+				<select id="keuzePoulesWijzig_0"></select>
+
+				<p id="WijzigPlayerPoules"></p>
+			</div>
+
+			<div class="CreeerPoule">
+				<h2>Nieuwe Poule</h2>
+				<input type="text" id="NaamPoule" placeholder="ID van Poule">
+				<select id="chooche" style='padding:12px 5px; width:90px;'>
+					<option id='6'>6</option>
+					<option id='7'>7</option>
+
+				</select>
+				<button type="button" class="SavePoule">Poule Aanmaken</button>
+			</div>
+
+			<div class="CreeerPlayer">
+				<h2>Nieuwe Speler</h2>
+
+				<input type="text" id="NaamSpeler" placeholder="Naam">
+				<input type="text" id="NaamVereniging" placeholder="Vereniging">
+				<select id="keuzePoules_0"></select>
+				<select id="plaatsPoules"></select>
+
+
+				<div id="PouleBut">
+
+					<button type="button" class="SavePlayer">Speler opslaan</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="error page">
+			<h3>Sorry, something went wrong :(</h3>
+		</div>
+
+
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+
+	<script src="assets/js/scriptV37.js"></script>
+	<script src="assets/js/Qeury.js"></script>
+
+
+
+</body>
+
+</html>

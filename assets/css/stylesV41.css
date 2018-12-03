@@ -1,0 +1,948 @@
+* 
+
+html {
+  font-family: "Trebuchet MS";
+  -webkit-text-size-adjust: 80%;
+      -ms-text-size-adjust: 80%;
+}
+body {
+	margin:0;
+	padding:0;
+}
+
+
+
+h1, h3{
+  font: normal 30px 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+/*-----------------
+	Main Content
+------------------*/
+
+
+
+.main-content{
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+	
+}
+
+.navbar{
+position: fixed;
+height: 50px;
+width: 100%;
+background: #002c69;
+z-index: 1;
+}
+
+.navcontainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  float: none;
+  position: relative;
+  
+}
+
+.njmlogo #logo {
+  margin: 0;
+  /* font-size: 30px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #f2f2f2; */
+  /* height: 50px; */
+  /* text-align: center; */
+  padding-top: 26px;
+  
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+  
+}
+.njmlogo img{
+	cursor: pointer;
+  }
+
+.njmlogo #homeButton {
+    margin: 0;
+    /* font-size: 30px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #f2f2f2; */
+    /* height: 50px; */
+    /* text-align: center; */
+    padding-right: 52px;
+    padding-top: 26px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+    
+  }
+
+
+.main-content h3{
+	font-size: 28px;
+	color:  #5a96b9;
+	padding-bottom: 20px;
+}
+
+#Topsporthal{
+  float: left;
+}
+
+/* @media (max-width: 600px){
+
+	.main-content{
+		
+		padding: 0 25px;
+	}
+
+} */
+
+
+/*---------------------------
+	Pages
+----------------------------*/
+
+.sign-product{
+	display: none;
+    transition: 0.6s;
+    position: relative;
+    align-items: center;
+    top: 100px;
+    margin: auto;
+    width: 60%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+.sign-product.visible{
+	display: block;
+}
+
+.backend-product{
+	display: none;
+	transition: 0.6s;
+	position: absolute;
+	left: 0;
+	top: 100px;
+  width: 100%;
+  border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+.backend-product.visible{
+	display: block;
+}
+
+.home-product{
+	display: none;
+	transition: 0.6s;
+	position: absolute;
+	left: 0;
+	top: 0px;
+  width: 100%;
+  box-sizing: content-box;
+ 
+  
+    padding: 0px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+.home-product.visible{
+  display: block;
+}
+
+.single-product{
+	box-sizing: content-box;
+}
+
+.overlay{
+	height: 20px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #282b2c;
+	transition: 0.6s;
+	z-index: 100;
+}
+
+.single-product.visible .overlay{
+	height: 100%;
+}
+
+.preview-large{
+	box-sizing: border-box;
+	width: 760px;
+	height: 550px;
+	
+	pointer-events: none;
+
+	border-radius: 6px;
+	background-color:  #ffffff;
+
+	z-index: 102;
+	display: none;
+	transition: 0.4s;
+
+}
+
+.single-product.visible .preview-large{
+	display: block;
+	transition: 1.4s;
+	pointer-events: auto;
+	position: absolute;
+	z-index: 0;
+	padding-top: 50px; 
+}
+
+.preview-large h3{
+	margin-top: 20px;
+}
+
+.preview-large img{
+	width: 100%;
+	height: 280px;
+	border-bottom: 3px solid #efefef;
+	border-radius: 5px 5px 0 0;
+}
+
+.preview-large p{
+	line-height: 23px;
+	padding: 50px 45px;
+}
+
+div#tables.preview-large{
+  width: 100%;
+}
+
+.close{
+	position: absolute;
+	right: 25px;
+	top: 15px;
+
+	font-size: 28px;
+	color: #555;
+	cursor: pointer;
+}
+
+
+
+/*---------------------------
+	Error Page
+----------------------------*/
+
+.error{
+	display: none;
+	transition: 0.6s;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 100px;
+	width: 100%;
+}
+
+.error.visible{
+	display: block;
+}
+
+.error h3{
+	font-size: 40px;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+#customers td.midden {
+  text-align: center;
+}
+
+#customers td.midden.win {
+  background-color: rgb(58, 187, 58);
+  text-align: center;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: monospace;
+
+  /* Verdana, Lucida Sans, monospace  */
+}
+
+#customers td.midden.loss {
+  background-color: rgb(156, 18, 18);
+  text-align: center;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+#customers td club{
+  font-style: italic;
+  font-size: 14px;
+  color: #5c5f5e;
+  opacity: 90%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #9da8a5;}
+
+#customers th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: #fc9d37;
+    color: white;
+}
+
+
+
+.Titel {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #313638;
+
+}
+
+/*-----------menu-------------------*/
+
+
+      /*---------------------------------------------------------*/
+
+      #menuToggle {
+        width: 33px;
+        height: 100%;
+        display: block;
+        position: relative;
+        top: 14px;
+        z-index: 10001;
+        -webkit-user-select: none;
+        user-select: none;
+        padding-left: 15px;
+      }
+      
+      #menuToggle input#checkbox {
+        display: block;
+        width: 45px;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        padding-left: 0px;
+        margin: 0;
+        
+        cursor: pointer;
+        opacity: 0; /* hide this */
+        z-index: 10002; /* and place it over the hamburger */
+      }
+
+      #menuToggle input#checkbox h2{
+        font-size: 20px;
+        padding-left: 500px
+      }
+      
+      /*
+       * Just a quick hamburger
+       */
+      
+      #menuToggle span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        left: auto;
+        margin-bottom: 5px;
+        position: relative;
+        background: #f2f2f2;
+        border-radius: 3px;
+        z-index: 10001;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),  opacity 0.55s ease;
+      }
+      
+      #menuToggle span:first-child { transform-origin: 0% 0%; }
+      
+      #menuToggle span:nth-last-child(2) { transform-origin: 0% 100%; }
+      
+      /* 
+       * Transform all the slices of hamburger
+       * into a crossmark.
+       */
+      
+      #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #f2f2f2;
+      }
+      
+      /*
+       * But let's hide the middle one.
+       */
+      
+      #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      
+      /*
+       * Ohyeah and the last one should go the other direction
+       */
+      
+      #menuToggle input:checked ~ span:nth-last-child(2) {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+
+
+      /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+
+#menu {
+	  position: fixed;	
+	margin: -100px 0 0 -16px;	
+	height: 100%;
+	padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 9px;
+    background: #011635;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    opacity: 0;
+    z-index: 10001;
+    
+  }
+
+  #menu #menuinner {
+    position: absolute;
+    top: 0;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    padding-left: 30px;
+}
+
+  #menu .Jongens{
+    margin-left: 20px;
+  }
+
+  #menu .Meisjes{
+    margin-left: 20px;
+  }
+
+  #menu a{
+    font-size: 18px;
+ 	  color: #f2f2f2;
+    display: block;
+    /* padding: 0px 20px; */
+    text-decoration: none;
+    cursor: pointer;
+     
+  }
+
+  #menu b{ /*hoofdtekst*/
+    font-size: 20px;
+    color: #fa901e;
+  }
+
+  #menu .Authentication{
+    border-top: solid 2px #fa901e;
+    font-size: 18px;
+
+  }
+  #menu .Invoer{
+    display: none;
+    font-size: 18px;
+
+  }
+  #menu .Invoer.visible{
+    display: block;
+    font-size: 18px;
+
+  }
+
+  
+  #menu li {
+    padding: 10px 0;
+    
+  }
+  #menu li fu{
+    vertical-align: sub;
+    
+  }
+  /*
+   * And let's fade it in from the left
+   */
+
+
+
+#menuToggle input:checked ~ ul {
+        transform: scale(1.0, 1.0);
+        opacity: 1;
+}
+
+.menumask.active {
+  display: block;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000;
+  transition: opacity 1s ease;
+}
+
+.menumask {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000;
+  transition: opacity 1s ease;
+}
+
+.active {
+    background-color: #fc9d37;
+}
+
+/* Standen Tabel */
+.StandenTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+  width: 100% ;
+  text-align: center;
+ 
+}
+
+.StandenTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.StandenTable th {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border: 0px solid #ddd;
+	background-color: #fc9d37;
+	color: white;
+	font-size: 16px;
+  text-align: middle;
+  
+}
+
+.StandenTable td {
+  border: 1px solid #ddd;
+	padding-top: 12px;
+	padding-bottom: 12px;
+  font-size: 14px;
+  text-align: middle;
+  position: relative;
+  
+}
+
+.StandenTable td asd {
+ 
+  width: 100%;
+}
+
+.StandenTable td a{
+  
+  width: 20px;
+}
+
+.StandenTable td.fout {
+  border: 3px solid red;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  font-size: 14px;
+  text-align: middle;
+}
+
+.StandenTable tr.strikeout td:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #111;
+  width: 100%;
+}
+
+/* Colaps rondemenu's */
+
+.Titel {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #313638;
+    padding-left: 15px;
+
+}
+
+.collapsiblewhole {
+  background-color: #002C69;
+  color: #f2f2f2;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: 10px;
+  border-color: #f2f2f2;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.collapsiblewhole:after {
+  content: '\002B';
+  color: #f2f2f2;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.collapsible {
+    background-color: #002C69;
+    color: #f2f2f2;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: 10px;
+    border-color: #f2f2f2;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+  }
+  
+  .active {
+    background-color: #fc9d37;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: #f2f2f2;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  /* Login */
+
+  input[type=text] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
+
+input[type=password] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #fc9d37;
+    color: #f2f2f2;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #002C69;
+}
+
+select#keuzePoules{
+  width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+select#plaatsPoules{
+  width: 70px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* Backend */
+
+select.CategoriePoule{
+  display: none;
+}
+
+select.CategoriePoule.visible{
+  display: block;
+}
+
+
+.CreeerPlayer{
+  display: none;
+}
+
+.CreeerPlayer.visible{
+  display: block;
+}
+
+.CreeerPoule{
+  display: none;
+}
+
+.CreeerPoule.visible{
+  display: block;
+}
+.WijzigPlayer{
+  display: none;
+}
+
+.WijzigPlayer.visible{
+  display: block;
+}
+
+.Wijzig{
+  display: none;
+}
+
+.Wijzig.visible{
+  display: block;
+}
+#PouleBut{
+  top: 10px;
+ 
+}
+
+.CreeerPoule button.NieuweSpeler{
+  align-items: flex-start;
+}
+
+.CreeerPoule button.DelSpeler{
+  display: none;
+}
+
+.CreeerPoule button.DelSpeler.visible{
+  display: block;
+}
+
+.uploaden {
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#mybutton {
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
+
+
+/* #home */
+
+ul, ol {
+	list-style: none;
+}
+
+ul, ol {
+	padding: 0;
+}
+
+.home-menu-container {
+  display: inline-block;
+  /* maak text unslectable voor verschillende browsers */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+}
+
+
+/* Services Section */
+#services {
+	padding: 50px 0;
+	background: rgba(252, 140, 22, 0.767);
+}
+#services h4 {
+	color: #053740;
+	text-transform: uppercase;
+}
+#services h2 {
+	color: #002C69;
+	text-transform: uppercase;
+}
+#services p {
+  color: #002C69;
+}
+
+/* About Section */
+#about {
+	padding: 25px 0;
+	background-color: rgba(42, 85, 158, 0.671)
+}
+#about h2 {
+  color: #002C69;
+}
+#about h4 {
+	color: #002C69;
+}
+#about .about-text {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+#about p {
+	margin-top: 20px;
+  margin-bottom: 30px;
+  color: #f3f3f3;
+}
+
+/* Team Section */
+#team {
+	padding: 25px 0;
+	color: rgba(255,255,255,0.9);
+	background: rgba(113, 0, 189, 0.486); 
+}
+#team h2 {
+	color: #002C69;
+}
+#team h3 {
+	color: #0a4b55;
+}
+#team .about-text {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+img.img-circle.team-img {
+	width: 160px;
+	height: 160px;
+}
+#team .thumbnail {
+	background: transparent;
+	border: 0;
+}
+#team .thumbnail .caption {
+	padding: 9px;
+	color: rgba(255,255,255,0.9);
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+.intro H1 {
+	font-size: 42px;
+}
+header .intro-text {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+#about img {
+	margin-bottom: 20px;
+}
+}
